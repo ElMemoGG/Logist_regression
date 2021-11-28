@@ -12,7 +12,7 @@ public class LogistR {
 
     }
 
-    public void LR(){
+    public void LR(double[] variables){
         utility util = new utility();
         double[] Wold = util.getW(x[0].length);
         double[] Wnew = new double[Wold.length];
@@ -37,6 +37,7 @@ public class LogistR {
             }
         }
         ImprimirW(Wold);
+        util.getProbabilidad(Wold, variables);
     }
     private void ImprimirW(double[] w){
         for (int i = 0; i < w.length; i++) {

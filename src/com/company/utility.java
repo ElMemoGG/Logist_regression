@@ -41,5 +41,19 @@ public class utility {
     }
 
 
+    public static void getProbabilidad( double[]w, double[]x){
+        double resultado  = 0;
+        for (int i = 1; i < w.length; i++) {
+            resultado += x[i-1]*w[i];
+        }
+        double re = Sigmoide(w[0]+resultado);
+        System.out.println();
+        if (re<=0.5){
+            System.out.println("No hay probabilidad:   "+ re);
+        }else{
+            System.out.println("Si hay probabilidad:   "+ re);
+        }
+    }
+
 
 }
