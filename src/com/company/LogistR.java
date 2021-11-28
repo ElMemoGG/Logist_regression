@@ -17,8 +17,8 @@ public class LogistR {
         double[] Wold = util.getW(x[0].length);
         double[] Wnew = new double[Wold.length];
 
-
-        for (int q = 0; q <= 8000; q++) {
+        //8000 y 0.01 para diabetes  --- 8000 0.0001
+        for (int q = 0; q < 8000; q++) {
             //System.out.println(Wold[0]+ " " + Wold[1]+ " ");
 
             for (int i = 0; i <x.length ; i++) {
@@ -33,7 +33,6 @@ public class LogistR {
             }
             for (int i = 0; i <Wold.length ; i++) {
                 Wold[i] = Wnew[i];
-
             }
         }
         ImprimirW(Wold);
