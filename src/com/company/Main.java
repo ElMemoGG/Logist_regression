@@ -14,7 +14,20 @@ public class Main extends Agent {
     public void getMultiple(final double[] x ) {
         addBehaviour(new OneShotBehaviour() {
             public void action() {
-                LogistR  regresion = new LogistR(Reader.leer("DataMultiple.txt"));
+                double[][] dataSet = new double[][]{
+                        {1,1,72,1},
+                        {1,2,72,1},
+                        {1,3,72,1},
+                        {1,4,72,0},
+                        {1,5,64,1},
+                        {1,6,64,0},
+                        {1,7,64,1},
+                        {2,1,72,1},
+                        {2,2,72,1},
+                        {2,3,72,0}
+                };
+
+                LogistR  regresion = new LogistR(dataSet);
                 //double[] x = {3.5,4};
                 regresion.LR(x);
             }
@@ -23,7 +36,7 @@ public class Main extends Agent {
     public void getSimple(final double[] x ) {
         addBehaviour(new OneShotBehaviour() {
             public void action() {
-                LogistR  regresion = new LogistR(Reader.leer("datasetDiabetes.txt"));
+                LogistR  regresion = new LogistR(Reader.leer("DataMultiple.txt"));
                 //double[] x = {3.5,4};
                 regresion.LR(x);
             }

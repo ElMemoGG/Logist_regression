@@ -27,7 +27,7 @@ public class utility {
     public static double getFuncionC(int numero, double[]w, double[][]x){
         double resultado  = 0;
         for (int i = 1; i < w.length; i++) {
-            resultado += x[i][numero]*w[i];
+            resultado += x[numero][i]*w[i];
         }
         return Sigmoide(w[0]+resultado);
     }
@@ -47,7 +47,7 @@ public class utility {
             resultado += x[i-1]*w[i];
         }
         double re = Sigmoide(w[0]+resultado);
-        System.out.println();
+        System.out.println("\n");
         if (re<=0.5){
             System.out.println("No hay probabilidad:   "+ re);
         }else{

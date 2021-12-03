@@ -23,7 +23,7 @@ public class Reader {
             int fila = 0;
             while(linea != null) {
 
-                String[] dato = linea.split(",");
+                String[] dato = linea.trim().split(",");
                 for (int i = 0; i < dato.length; i++)
                     matriz[fila][i] = Double.parseDouble(dato[i]);
 
